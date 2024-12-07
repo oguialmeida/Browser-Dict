@@ -1,0 +1,17 @@
+{
+    "manifest_version": 2,
+    "name": "Minha Primeira Extensão",
+    "version": "1.0",
+    "description": "Essa é uma extensão de teste para o Firefox.",
+    "icons": {
+        "48": "icon.png"
+    },
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "Clique aqui!"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}
