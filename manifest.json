@@ -1,21 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "Interação com a Página",
-    "version": "1.0",
-    "description": "Extensão para selecionar palavras em uma página.",
-    "permissions": ["activeTab", "scripting"],
-    "host_permissions": ["<all_urls>"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ],
-    "icons": {
-      "48": "icon.png"
+  "manifest_version": 3,
+  "name": "Destaque Palavra",
+  "version": "1.0",
+  "description": "Captura uma palavra selecionada e a envolve com um span.",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
     }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "48": "icon.png"
   }
-  
+}
