@@ -1,4 +1,8 @@
-document.getElementById("toggleHighlight").addEventListener("click", () => {
+/*
+  Word search and translation logic (for now with some things in Portuguese).
+*/
+
+document.getElementById("getSoloText").addEventListener("click", () => {
   // Obtém o tabId da aba ativa
   chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
     const tab = tabs[0];
@@ -10,7 +14,7 @@ document.getElementById("toggleHighlight").addEventListener("click", () => {
       // Executa o script na aba ativa
       chrome.scripting.executeScript({
         target: { tabId: tabId },
-        func: toggleHighlight
+        func: getNewText
       });
     } else {
       console.log("A extensão não pode ser usada em páginas internas do Chrome.");
@@ -19,7 +23,7 @@ document.getElementById("toggleHighlight").addEventListener("click", () => {
 });
 
 // Função que será executada na aba ativa
-function toggleHighlight() {
+function getNewText() {
   const selection = window.getSelection();
   const selectedText = selection.toString().trim();
 
