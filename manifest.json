@@ -1,16 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "Minha Primeira Extensão",
-    "version": "1.0",
-    "description": "Essa é uma extensão de teste para o Chrome.",
-    "icons": {
-      "48": "icon.png"
-    },
-    "action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html",
-      "default_title": "Clique aqui!"
-    },
-    "permissions": ["activeTab"]
+  "manifest_version": 3,
+  "name": "Hiper Dict",
+  "version": "1.0",
+  "description": "Captura uma palavra selecionada e a envolve com um span.",
+  "permissions": ["scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/js/index.js"]
+    }
+  ],
+  "action": {
+    "default_popup": "src/index.html",
+    "default_icon": "src/img/icon.png"
+  },
+  "icons": {
+    "48": "src/img/icon.png"
   }
-  
+}
