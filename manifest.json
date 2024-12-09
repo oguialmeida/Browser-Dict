@@ -1,16 +1,21 @@
 {
     "manifest_version": 3,
-    "name": "Minha Primeira Extensão",
+    "name": "Interação com a Página",
     "version": "1.0",
-    "description": "Essa é uma extensão de teste para o Chrome.",
+    "description": "Extensão para selecionar palavras em uma página.",
+    "permissions": ["activeTab", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ],
     "icons": {
       "48": "icon.png"
-    },
-    "action": {
-      "default_icon": "icon.png",
-      "default_popup": "popup.html",
-      "default_title": "Clique aqui!"
-    },
-    "permissions": ["activeTab"]
+    }
   }
   
