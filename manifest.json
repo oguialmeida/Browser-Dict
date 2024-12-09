@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Destaque Palavra",
+  "name": "Hiper Dict",
   "version": "1.0",
   "description": "Captura uma palavra selecionada e a envolve com um span.",
   "permissions": ["scripting"],
@@ -8,14 +8,14 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["popup.js"]
+      "js": ["src/js/index.js"]
     }
   ],
   "action": {
-    "default_popup": "popup.html",
-    "default_icon": "icon.png"
+    "default_popup": "src/index.html",
+    "default_icon": "src/img/icon.png"
   },
   "icons": {
-    "48": "icon.png"
+    "48": "src/img/icon.png"
   }
 }
