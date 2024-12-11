@@ -2,29 +2,19 @@
 <html>
 <head>
   <title>Minha Extensão</title>
-  <style>
-    body {
-      width: 200px;
-      height: 150px;
-      font-family: Arial, sans-serif;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      margin-top: 20px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #45a049;
-    }
-  </style>
+  <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
   <h3>Traduzir palavra</h3>
-  <button id="toggleHighlight">Ativar/Desativar Destaque</button>
+  <button id="getSoloText">Apenas Traduzir</button>
+  <button id="">Traduzir e salvar</button>
+
+  <!-- Área de resultados e carregamento -->
+  <div id="loading" style="display:none;">Carregando...</div>
+  <div id="result" style="display:none;">
+    <h4>Resultado da Tradução:</h4>
+    <p id="translatedText"></p>
+  </div>
 
   <script src="./js/index.js"></script>
 </body>
