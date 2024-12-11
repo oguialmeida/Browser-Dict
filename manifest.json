@@ -3,7 +3,7 @@
   "name": "Hiper Dict",
   "version": "1.0",
   "description": "Captura uma palavra selecionada e a envolve com um span.",
-  "permissions": ["scripting"],
+  "permissions": ["scripting", "activeTab"],
   "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
